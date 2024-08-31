@@ -45,7 +45,7 @@ const filter = {
 	},
 };
 
-const roomMatch = /[#|!].+:.+\./;
+const roomMatch = /[#|!][^/@].+:.+\./;
 
 //Start Client
 client.start(filter).then(async (filter) => {
