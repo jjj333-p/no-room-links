@@ -1,0 +1,23 @@
+{
+	"name": "no-room-links",
+	"description": "A simple matrix bot to disallow posting of room links",
+	"main": "index.js",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jjj333-p/no-room-links.git"
+	},
+	"author": "jjj333_p",
+	"license": "GPL-3.0",
+	"homepage": "https://github.com/jjj333-p/no-room-links#readme",
+	"dependencies": {
+		"@matrix-org/matrix-sdk-crypto-nodejs": "0.1.0-beta.12",
+		"axios": "^1.7.2",
+		"matrix-bot-sdk": "^0.7.1",
+		"yaml": "^2.4.1"
+	}
+}
