@@ -56,8 +56,10 @@ client.start(filter).then(async (filter) => {
 client.on("room.event", async (roomID, event) => {
 	//all the checks
 	if (
-		(roomMatch.test(event?.content?.body || "") ||
-			roomMatch.test(event?.content?.formatted_body || "")) &&
+		(event?.content?.body.split(" ").some((w) => roomMatch.test(w)) ||
+			event?.content?.formatted_body
+				.split(" ")
+				.some((w) => roomMatch.test(w))) &&
 		!(await client.userHasPowerLevelForAction(event.sender, roomID, "ban"))
 	) {
 		client
