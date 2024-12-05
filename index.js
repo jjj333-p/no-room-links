@@ -31,16 +31,15 @@ const filter = {
 	room: {
 		//ephemeral events are never used in this bot, are mostly inconsequentail and irrelevant
 		ephemeral: { senders: [] },
-		//we fetch state manually later, hopefully with better load balancing
+		//no use for state
 		state: {
 			senders: [],
 			types: [],
 			lazy_load_members: true,
 		},
-		//we will manually fetch events anyways, this is just limiting how much backfill bot gets as to not
-		//respond to events far out of view
+		//performance
 		timeline: {
-			limit: 25,
+			limit: 50,
 		},
 	},
 };
