@@ -56,7 +56,7 @@ client.start(filter).then(async (filter) => {
 client.on("room.event", async (roomID, event) => {
 	//all the checks
 	if (
-		(event?.content?.body.split(" ").some((w) => roomMatch.test(w)) ||
+		(event?.content?.body?.split(" ")?.some((w) => roomMatch.test(w)) ||
 			event?.content?.formatted_body
 				?.split(" ")
 				?.some((w) => roomMatch.test(w))) &&
