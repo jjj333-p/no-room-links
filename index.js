@@ -44,7 +44,8 @@ const filter = {
 	},
 };
 
-const roomMatch = /[#!][^@/:]+:[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+const roomMatch =
+	/(?:[#!]|%23|%21)[^@/:]+(?::|%3A)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
 
 //Start Client
 client.start(filter).then(async (filter) => {
